@@ -107,7 +107,6 @@ section {
 }
 
 .clearfix::after, /* ::after is now ::after with a double colon */
-.clearfix::after,
 .navbar::after {
     clear: both;
     display: table;
@@ -177,6 +176,7 @@ section {
 }
 
 /* Contact STYLES */
+
 .flex-container {
     display: -webkit-flex;
     display: flex;
@@ -379,12 +379,9 @@ section {
     border: 1px solid #9d9fa2;
     box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.5);
     border-radius: 6px;
-    /*background-color: #052136;*/
     cursor: pointer;
-    transition-property: background;
-    transition-duration: .4s;
-    transition-delay: 0s;
-    transition-timing-function: ease-in-out;
+    transition: background-color .4s ease-in-out, color .4s ease-in-out;
+    
 }
 
 .menu li:hover {
@@ -457,7 +454,7 @@ box-shadow: 2px 2px 10px 0 rgba(0, 0, 0,0.7);
 
 }
 
-.phot:hover:hover img {
+.phot:hover img {
     transform: scale(1.1);
 }
 
