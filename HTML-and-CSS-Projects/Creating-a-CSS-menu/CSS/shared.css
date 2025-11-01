@@ -181,7 +181,7 @@ section {
     display: -webkit-flex;
     display: flex;
     flex-wrap: wrap;
-    padding: 10;
+    padding: 10px;
     border-radius: 8px;
     margin: 0px auto;
     background-color: rgba(100, 65, 0, 0.13);
@@ -449,7 +449,7 @@ box-shadow: 2px 2px 10px 0 rgba(0, 0, 0,0.7);
 }
 
 .photo img {
-    transition: transform .5S;
+    transition: transform .5s;
     transform-origin: 30% 50%;
 
 }
