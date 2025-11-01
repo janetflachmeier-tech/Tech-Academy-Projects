@@ -451,10 +451,9 @@ box-shadow: 2px 2px 10px 0 rgba(0, 0, 0,0.7);
 .photo img {
     transition: transform .5s;
     transform-origin: 30% 50%;
-
 }
 
-.phot:hover img {
+.photo:hover img {
     transform: scale(1.1);
 }
 
