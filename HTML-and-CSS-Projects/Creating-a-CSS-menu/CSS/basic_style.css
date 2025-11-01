@@ -60,7 +60,7 @@ h1 {
    animation-name: race;
    animation-duration: 2.5s;
    animation-iteration-count: infinite;
-   animation-timing-function: cubic-bezier(2.5, 0.2, 0.3, 2);
+   animation-timing-function: cubic-bezier(0.8, 0.2, 0.3, 1.5);
 }
 
 /* INDIVIDUAL SQUARE HOVER COLORS */

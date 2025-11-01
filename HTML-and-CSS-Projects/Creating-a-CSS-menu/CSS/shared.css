@@ -318,7 +318,7 @@ section {
 #footer {
     background-color: rgb(100, 65, 0, .3);
     color: #000;
-    text-shadow: 2px 2px 8px 0 rgb(100, 65, 0, 1);
+    text-shadow: 2px 2px 8px  rgb(100, 65, 0, 1);
     padding: 20px 50px 20px 50px;
     text-align: right;
 }
