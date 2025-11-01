@@ -1,0 +1,27 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[submodule]
+	active = .
+[remote "origin"]
+	url = https://github.com/janetflachmeier-tech/HTML-and-CSS-Projects.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main
+	vscode-merge-base = origin/main
+[lfs]
+	repositoryformatversion = 0
+[branch "github-assignment"]
+	github-pr-base-branch = "janetflachmeier-tech#HTML-and-CSS-Projects#main"
+	vscode-merge-base = origin/main
+	remote = origin
+	merge = refs/heads/github-assignment
+	github-pr-owner-number = "janetflachmeier-tech#HTML-and-CSS-Projects#1"
+[branch "janetflachmeier-tech/issue2"]
+	github-pr-base-branch = "janetflachmeier-tech#HTML-and-CSS-Projects#github-assignment"
+	vscode-merge-base = origin/github-assignment
