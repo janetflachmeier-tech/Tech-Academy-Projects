@@ -32,3 +32,4 @@ function My_First_Function() {          //Defining the function and naming it
     document.getElementById("Button_Text").innerHTML = str; //Putting the value of the variable 
 }
                                                              //into the HTML element with "Button_Text" id
+<input type="text" oncopy="myFunction()" value="Try to copy me"></input>

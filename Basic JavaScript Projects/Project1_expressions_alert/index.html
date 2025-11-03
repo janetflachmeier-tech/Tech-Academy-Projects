@@ -2,10 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Expressions Alert!</title>
+  <title>Janet's JavaScript Exercises</title>
+  <script>
+    // Alert Method
+    window.alert("Hello Universe!");
+
+    // Variables and document.write()
+    var X = " Good Morning!";
+    var Y = " It's a beautiful day!";
+    document.write("Hello World!<br>");
+    document.write(X + "<br>");
+    document.write(Y + "<br>");
+
+    // Escaping Characters and String Assignments
+    const message = "My Message to you all, \"Have a fantastic day!\"";
+    var Z = "Welcome to the JavaScript Exercises Page! -Janet Flachmeier";
+    document.write(message + "<br>");
+    document.write(Z + "<br>");
+
+    // Concatenating Assignment
+    var FirstName = "Janet", LastName = "Flachmeier", Age = 30, greeting = "Hello", Occupation = "Web Developer";
+    document.write("Age: " + Age + "<br>");
+    document.write("Occupation: " + Occupation + "<br>");
+
+    // Expression
+    var total = 5 + 5;
+    document.write("I feel ecstatic today and I rate my day: " + total + "<br>");
+
+    // Copy Event Function
+    function myFunction() {
+      alert("🌙 You copied something magical!");
+    }
+
+    // Button Text Function
+    function My_First_Function() {
+      var str = "This is the button text!";
+      document.getElementById("Button_Text").innerHTML = str;
+    }
+  </script>
 </head>
-<body>
-  <script src="JS/main.js"></script>
-  <button onclick="My_First_Function()" id="Button_Text"> Click me!</button>
-  </body>
+<body style="font-family: 'Segoe UI', sans-serif; padding: 20px; background-color: #fdf6f0; color: #333;">
+  <h1>🌸 Welcome, Janet!</h1>
+  <p>Try copying the text below:</p>
+  <input type="text" oncopy="myFunction()" value="Try to copy me">
+
+  <br><br>
+  <button onclick="My_First_Function()">Click for Button Text</button>
+  <p id="Button_Text" style="font-weight: bold; color: #6a4f4b;"></p>
 </body>
+</html>
