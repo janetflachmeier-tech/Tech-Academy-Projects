@@ -10,4 +10,8 @@ function concatenateMessage() {
   message += " there!";
   document.getElementById("Message_Output").innerHTML = message;
 }
-
+//JavaScript function: showMessage()
+function showMessage() {
+  let message = "This is a simple function.";
+  document.getElementById("output").innerHTML = message;
+}
