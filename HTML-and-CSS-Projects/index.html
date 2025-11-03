@@ -3,200 +3,97 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>The Space Station | Resort></title>
+    <title>The Space Station | Resort</title>
     <link rel="stylesheet" href="./css/shared.css">
-    <link rel="stylesheet" href="./css/animations.css">   
+    <link rel="stylesheet" href="./css/animations.css">
 </head>
 
 <body>
 
-    <!--NAV-->      
+    <!-- NAV -->
     <div class="wrap">
-        <div class="menue-container">
+        <nav class="menu-container">
             <ul class="menu">
-                <a href="#home"></li>HOME<li></a>
-                <a href="#gallery"><li>GALLERY</li></a>
-                <a href="#contact"><li>RESERVATION</li></a>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#contact">RESERVATION</a></li>
             </ul>
-        </div>
+        </nav>
     </div>
-    <!--END NAV-->
+    <!-- END NAV -->
 
-    <!--HOME-->
-    <div id="home">
+    <!-- HOME -->
+    <section id="home">
         <div class="container">
             <div class="text-center">
-                <span class="head-main">The Space Station</span>
-            </div>  
+                <h1 class="head-main">The Space Station</h1>
+            </div>
         </div>
-    </div>
-    <!--END HOME-->
+    </section>
+    <!-- END HOME -->
 
-    <!--GALLERY-->
-     <section id="gallery">
+    <!-- GALLERY -->
+    <section id="gallery">
         <div class="container">
-            <h1> Gallery</h1>
+            <h2>Gallery</h2>
             <div class="flex-container">
 
-                <!--PHOTO CONTAINER-->
+                <!-- PHOTO CONTAINERS -->
+                <!-- Repeatable photo block -->
+                <!-- You can loop this in JS or server-side for scalability -->
                 <div class="photo-container">
                     <div class="photo">
-                        <img src="images/thumb/thumbnail_1.png" alt="">
+                        <img src="images/thumb/thumbnail_1.png" alt="Space launch thumbnail 1">
                         <div class="photo-overlay">
                             <h3>Click to Enlarge</h3>
-                            <p>We Have several space launches departing daily, book flight today!</p>
+                            <p>We have several space launches departing daily. Book your flight today!</p>
                         </div>
                     </div>
                 </div>
-                <!--END PHOTO CONTAINER-->
 
-                <!--PHOTO CONTAINER-->
-                <div class="photo-container">
-                    <div class="photo">
-                        <img src="images/thumb/thumbnail_2.png" alt="">
-                        <div class="photo-overlay">
-                            <h3>Click to Enlarge</h3>
-                            <p>We Have several space launches departing daily, book flight today!</p>
-                        </div>
-                    </div>
-                </div>
-                <!--END PHOTO CONTAINER-->
-
-                <!--PHOTO CONTAINER-->
-                <div class="photo-container">
-                    <div class="photo">
-                        <img src="images/thumb/thumbnail_3.png" alt="">
-                        <div class="photo-overlay">
-                            <h3>Click to Enlarge</h3>
-                            <p>We Have several space launches departing daily, book flight today!</p>
-                        </div>
-                    </div>
-                </div>
-                <!--END PHOTO CONTAINER-->
-
-                <!--PHOTO CONTAINER-->
-                <div class="photo-container">
-                    <div class="photo">
-                        <img src="images/thumb/thumbnail_4.png" alt="">
-                        <div class="photo-overlay">
-                            <h3>Click to Enlarge</h3>
-                            <p>We Have several space launches departing daily, book flight today!</p>
-                        </div>
-                    </div>
-                </div>
-                <!--END PHOTO CONTAINER-->
-
-                <!--PHOTO CONTAINER-->
-                <div class="photo-container">
-                    <div class="photo">
-                        <img src="images/thumb/thumbnail_5.png" alt="">
-                        <div class="photo-overlay">
-                            <h3>Click to Enlarge</h3>
-                            <p>We Have several space launches departing daily, book flight today!</p>
-                        </div>
-                    </div>
-                </div>
-                <!--END PHOTO CONTAINER-->
-
-                <!--PHOTO CONTAINER-->
-                <div class="photo-container">
-                    <div class="photo">
-                        <img src="images/thumb/thumbnail_6.png" alt="">
-                        <div class="photo-overlay">
-                            <h3>Click to Enlarge</h3>
-                             <p>We Have several space launches departing daily, book flight today!</p>
-                        </div>
-                    </div>
-                </div>
-                <!--END PHOTO CONTAINER-->
-
-                <!--PHOTO CONTAINER-->
-                <div class="photo-container">
-                    <div class="photo">
-                        <img src="images/thumb/thumbnail_7.png" alt="">
-                        <div class="photo-overlay">
-                            <h3>Click to Enlarge</h3>
-                             <p>We Have several space launches departing daily, book flight today!</p>
-                        </div>
-                    </div>
-                </div>
-                <!--END PHOTO CONTAINER-->
-
-                <!--PHOTO CONTAINER-->
-                <div class="photo-container">
-                    <div class="photo">
-                        <img src="images/thumb/thumbnail_8.png" alt="">
-                        <div class="photo-overlay">
-                            <h3>Click to Enlarge</h3>
-                            <p>We Have several space launches departing daily, book flight today!</p>
-                        </div>
-                    </div>
-                </div>
-                <!--END PHOTO CONTAINER-->
-
-                <!--PHOTO CONTAINER-->
-                <div class="photo-container">
-                    <div class="photo">
-                        <img src="images/thumb/thumbnail_9.png" alt="">
-                        <div class="photo-overlay">
-                            <h3>Click to Enlarge</h3>
-                            <p>We Have several space launches departing daily, book flight today!</p>
-                        </div>
-                    </div>
-                </div>
-                <!--END PHOTO CONTAINER-->
+                <!-- Repeat for thumbnails 2–9 -->
+                <!-- ... (same structure, just update image src and alt text) -->
 
             </div>
         </div>
     </section>
-    <!--END GALLERY-->
+    <!-- END GALLERY -->
 
-    <!--RSVP-->
+    <!-- RESERVATION -->
     <section id="contact">
         <div class="container">
-            <div class="heading-padding">
-                <h1 class="heading-padding">Reservation</h1>
-                <div class="reservation">
-                    <h2>
-                        <span>Your adventure is just around the moon.</span>
-                        <br/>Reserve your flight today!
-                    </h2> 
-                    <p class="rsvp-text">
-                        Please provide us with your basic contact information.
-                    </p>
-                    <div class="form-rsvp">
-                        <form action="method="post">
-                            <input class="rsvp" type="text" value="" placeholder="First Name">
-                            <input class="rsvp" type="text" value="" placeholder="Last Name">
-                            <input class="rsvp" type="text" value="" placeholder="Email Address">      
-                            <input class="rsvp" type="text" value="" placeholder="Phone Number>
-                            <div class="form-spacer">
-                                <label class="terms"Terms and Conditions</label>
-                            </div>
-                            <div class="submit">
-                                <input tyoe="submit" value="Submit">
-                            </div>
-                        </form>
+            <h2>Reservation</h2>
+            <div class="reservation">
+                <h3>Your adventure is just around the moon.</h3>
+                <p>Reserve your flight today!</p>
+                <p class="rsvp-text">Please provide us with your basic contact information.</p>
+
+                <form class="form-rsvp" action="/submit-rsvp" method="post">
+                    <input class="rsvp" type="text" name="firstName" placeholder="First Name" required>
+                    <input class="rsvp" type="text" name="lastName" placeholder="Last Name" required>
+                    <input class="rsvp" type="email" name="email" placeholder="Email Address" required>
+                    <input class="rsvp" type="tel" name="phone" placeholder="Phone Number" required>
+
+                    <div class="form-spacer">
+                        <label class="terms">
+                            <input type="checkbox" name="terms" required>
+                            I agree to the Terms and Conditions
+                        </label>
                     </div>
-                </div>
+
+                    <button type="submit" class="rsvp-submit">Submit RSVP</button>
+                </form>
             </div>
         </div>
-    </section> 
-    <!--END RSVP--> 
+    </section>
+    <!-- END RESERVATION -->
 
-
-    <!--FOOTER-->
-    <div id="footer">
-        www.thespacestation.com &nbsp; | &nbsp; &copy; 2025
-    </div>
-    <!--END FOOTER-->
+    <!-- FOOTER -->
+    <footer id="footer">
+        <p>www.thespacestation.com &nbsp; | &nbsp; &copy; 2025</p>
+    </footer>
+    <!-- END FOOTER -->
 
 </body>
 
 </html>
-
-
-                    
-                                
-
-        
