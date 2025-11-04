@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 7: Scope, Time & Function</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .output {
+            background-color: #f8f9fa;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Project 7: Scope, Time & Function</h1>
+    <p><strong>Instructions:</strong> Open Chrome Dev Tools (F12) and check the Console tab to see debugging messages!</p>
+    
+    <div class="section">
+        <h2>Global vs Local Variables</h2>
+        <button onclick="demonstrateScope()">Test Variable Scope</button>
+        <div id="scopeDemo" class="output">Click the button to see global and local variables in action!</div>
+    </div>
+    
+    <div class="section">
+        <h2>Error Debugging with Console.log()</h2>
+        <button onclick="testErrorHandling()">Test Error Handling</button>
+        <div id="errorDemo" class="output">Click to see error debugging in action!</div>
+    </div>
+    
+    <div class="section">
+        <h2>Additional Debugging Examples</h2>
+        <button onclick="moreDebuggingExamples()">Show More Debug Examples</button>
+        <div id="debugDemo" class="output">Click to see various console.log() examples!</div>
+    </div>
+    
+    <div class="section">
+        <h2>Time-Based Greeting Method</h2>
+        <p id="timeGreeting" onclick="displayTimeGreeting()" style="cursor: pointer; background-color: #e7f3ff; padding: 10px; border-radius: 5px;">Click here to get a time-based greeting!</p>
+    </div>
+    
+    <div class="section">
+        <h2>Time_function() - Course Required Function</h2>
+        <button onclick="Time_function()">Get Time of Day</button>
+        <p id="Time_of_day">Time message will appear here.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Age Verification System</h2>
+        <p>Please enter your age below to check if you can vote. You must be 18 or older to vote.</p>
+        <input id="ageInput" type="number" placeholder="Enter your age" min="0" max="150">
+        <button onclick="checkAge()">Check Voting Eligibility</button>
+        <p id="ageResult">Your voting eligibility will appear here.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Else If Assignment - Age Category Checker</h2>
+        <p>Enter your age below to see which life stage category you belong to.</p>
+        <input id="categoryInput" type="number" placeholder="Enter your age" min="0" max="150">
+        <button onclick="checkAgeCategory()">Check Age Category</button>
+        <p id="categoryResult">Your age category will appear here.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Instructions for Chrome Dev Tools:</h2>
+        <ol>
+            <li>Press F12 or right-click and select "Inspect"</li>
+            <li>Click on the "Console" tab</li>
+            <li>Click the buttons above to see console.log() messages</li>
+            <li>Look for the intentional error and how it's handled</li>
+        </ol>
+    </div>
+
+    <script src="JS/main.js"></script>
+</body>
+</html>
