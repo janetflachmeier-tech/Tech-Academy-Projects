@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 9: Countdown & Slideshow</title>
+    <link rel="stylesheet" href="CSS/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Project 9: Countdown Timer & Image Slideshow</h1>
+        
+        <!-- Countdown Timer Section -->
+        <div class="countdown-section">
+            <h2>Countdown Timer</h2>
+            <p>How many seconds would you like to set your alarm for?</p>
+            <input id="seconds" value="" placeholder="Enter seconds" type="number" />
+            <br>
+            <button onclick="countdown()">Start Countdown</button>
+            <p id="timer"></p>
+        </div>
+        
+        <!-- Slideshow Section -->
+        <div class="slideshow-container">
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <img src="images/car1.jpg" alt="Slede 1">
+                <div class="slide-text">Beautiful Landscape - Slide 1</div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="images/car2.jpg" alt="Slide 2">
+                <div class="slide-text">Ocean View - Slide 2</div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="images/car3.jpg" alt="Slide 3">
+                <div class="slide-text">Mountain Peak - Slide 3</div>
+            </div>
+            
+            <!-- Slide 4 -->
+            <div class="slide">
+                <img src="https://via.placeholder.com/1000x400/96CEB4/FFFFFF?text=Slide+4+-+Forest+Path" alt="Slide 4">
+                <div class="slide-text">Forest Path - Slide 4</div>
+            </div>
+            
+            <!-- Navigation arrows -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+        
+        <!-- Dots/Indicators -->
+        <div class="dots-container">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        
+        <!-- Slideshow Controls -->
+        <div class="slideshow-controls">
+            <button onclick="startAutoPlay()">Start Auto Play</button>
+            <button onclick="stopAutoPlay()">Stop Auto Play</button>
+            <button onclick="previousSlide()">Previous</button>
+            <button onclick="nextSlide()">Next</button>
+        </div>
+        
+        <div class="auto-play-status" id="autoPlayStatus">
+            Auto-play: Stopped
+        </div>
+        
+        <!-- Instructions -->
+        <div class="countdown-section">
+            <h2>Instructions</h2>
+            <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+                <li><strong>Countdown Timer:</strong> Enter seconds and click "Start Countdown"</li>
+                <li><strong>Manual Navigation:</strong> Use arrow buttons or click dots to navigate</li>
+                <li><strong>Auto-play:</strong> Click "Start Auto Play" for automatic slideshow</li>
+                <li><strong>Keyboard Controls:</strong> Use left/right arrow keys to navigate</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="JS/main.js"></script>
+</body>
+</html>

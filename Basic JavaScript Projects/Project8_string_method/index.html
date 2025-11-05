@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 8: String Methods</title>
+    <script src="JS/main.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .output {
+            background-color: #f8f9fa;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #007bff;
+        }
+        input {
+            padding: 8px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Project 8: String & Number Methods - Complete Collection</h1>
+    
+    <div class="section">
+        <h2>Basic concat() with Two Strings</h2>
+        <button onclick="concatTwoStrings()">Test Two String Concatenation</button>
+        <p id="concatResult1" class="output">Click the button to see concat() with two strings.</p>
+    </div>
+    
+    <div class="section">
+        <h2>concat() with Multiple Strings</h2>
+        <button onclick="concatMultipleStrings()">Test Multiple String Concatenation</button>
+        <p id="concatResult2" class="output">Click the button to see concat() with multiple strings.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Practical Sentence Builder</h2>
+        <button onclick="buildSentence()">Build a Sentence</button>
+        <p id="concatResult3" class="output">Click the button to see a sentence built with concat().</p>
+    </div>
+    
+    <div class="section">
+        <h2>Interactive User Input concat()</h2>
+        <input id="userFirstName" type="text" placeholder="Enter first name">
+        <input id="userLastName" type="text" placeholder="Enter last name">
+        <button onclick="concatUserInput()">Create Personal Message</button>
+        <p id="concatResult4" class="output">Enter your name above and click the button.</p>
+    </div>
+    
+    <div class="section">
+        <h2>concat() vs + Operator Comparison</h2>
+        <button onclick="compareStringMethods()">Compare Methods</button>
+        <p id="concatResult5" class="output">Click to compare concat() method with + operator.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Basic slice() Method</h2>
+        <button onclick="basicSliceDemo()">Test Basic slice()</button>
+        <p id="sliceResult1" class="output">Click to see basic slice() method demonstrations.</p>
+    </div>
+    
+    <div class="section">
+        <h2>slice() with Negative Indices</h2>
+        <button onclick="negativeSliceDemo()">Test Negative slice()</button>
+        <p id="sliceResult2" class="output">Click to see slice() with negative indices.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Interactive slice() Method</h2>
+        <input id="sliceInput" type="text" placeholder="Enter text to slice" value="Hello World!">
+        <input id="startIndex" type="number" placeholder="Start index" value="0">
+        <input id="endIndex" type="number" placeholder="End index" value="5">
+        <button onclick="interactiveSlice()">Apply slice()</button>
+        <p id="sliceResult3" class="output">Enter text and indices above, then click the button.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Practical slice() Applications</h2>
+        <button onclick="practicalSliceDemo()">Show Practical Examples</button>
+        <p id="sliceResult4" class="output">Click to see real-world slice() applications.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Basic toUpperCase() Method</h2>
+        <button onclick="basicUpperCaseDemo()">Test Basic toUpperCase()</button>
+        <p id="upperCaseResult1" class="output">Click to see basic toUpperCase() method demonstration.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Practical toUpperCase() Applications</h2>
+        <button onclick="practicalUpperCaseDemo()">Show Practical Examples</button>
+        <p id="upperCaseResult2" class="output">Click to see real-world toUpperCase() applications.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Interactive toUpperCase() Method</h2>
+        <input id="upperCaseInput" type="text" placeholder="Enter text to convert" value="Hello JavaScript!">
+        <button onclick="interactiveUpperCase()">Convert to Uppercase</button>
+        <p id="upperCaseResult3" class="output">Enter text above and click to convert to uppercase.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Basic search() Method</h2>
+        <button onclick="basicSearchDemo()">Test Basic search()</button>
+        <p id="searchResult1" class="output">Click to see basic search() method demonstration.</p>
+    </div>
+    
+    <div class="section">
+        <h2>search() with Regular Expressions</h2>
+        <button onclick="regexSearchDemo()">Test Regex search()</button>
+        <p id="searchResult2" class="output">Click to see search() with regular expressions.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Interactive search() Method</h2>
+        <input id="searchTextInput" type="text" placeholder="Enter text to search in" value="The quick brown fox jumps over the lazy dog">
+        <input id="searchTermInput" type="text" placeholder="Enter search term" value="fox">
+        <button onclick="interactiveSearch()">Search Text</button>
+        <p id="searchResult3" class="output">Enter text and search term above, then click to search.</p>
+    </div>
+    
+    <div class="section">
+        <h2>search() vs indexOf() Comparison</h2>
+        <button onclick="compareSearchMethods()">Compare Methods</button>
+        <p id="searchResult4" class="output">Click to compare search() and indexOf() methods.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Basic toString() Method</h2>
+        <button onclick="basicToStringDemo()">Test Basic toString()</button>
+        <p id="toStringResult1" class="output">Click to see basic toString() method demonstration.</p>
+    </div>
+    
+    <div class="section">
+        <h2>toString() with Number Bases (Radix)</h2>
+        <button onclick="radixToStringDemo()">Test Different Bases</button>
+        <p id="toStringResult2" class="output">Click to see toString() with different number bases.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Practical toString() Applications</h2>
+        <button onclick="practicalToStringDemo()">Show Practical Examples</button>
+        <p id="toStringResult3" class="output">Click to see real-world toString() applications.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Interactive toString() Method</h2>
+        <input id="toStringInput" type="number" placeholder="Enter a number" value="123">
+        <input id="radixInput" type="number" placeholder="Enter base (2-36)" value="10" min="2" max="36">
+        <button onclick="interactiveToString()">Convert to String</button>
+        <p id="toStringResult4" class="output">Enter a number and base above, then click to convert.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Number to String Conversion Methods</h2>
+        <button onclick="compareNumberConversion()">Compare Conversion Methods</button>
+        <p id="toStringResult5" class="output">Click to compare different ways to convert numbers to strings.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Basic toPrecision() Method</h2>
+        <button onclick="basicToPrecisionDemo()">Test Basic toPrecision()</button>
+        <p id="toPrecisionResult1" class="output">Click to see basic toPrecision() method demonstration.</p>
+    </div>
+    
+    <div class="section">
+        <h2>toPrecision() with Various Numbers</h2>
+        <button onclick="variousToPrecisionDemo()">Test Various Numbers</button>
+        <p id="toPrecisionResult2" class="output">Click to see toPrecision() with different types of numbers.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Practical toPrecision() Applications</h2>
+        <button onclick="practicalToPrecisionDemo()">Show Practical Examples</button>
+        <p id="toPrecisionResult3" class="output">Click to see real-world toPrecision() applications.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Interactive toPrecision() Method</h2>
+        <input id="toPrecisionInput" type="number" placeholder="Enter a number" value="123.456789" step="any">
+        <input id="precisionInput" type="number" placeholder="Enter precision (1-100)" value="4" min="1" max="100">
+        <button onclick="interactiveToPrecision()">Apply toPrecision()</button>
+        <p id="toPrecisionResult4" class="output">Enter a number and precision above, then click to apply toPrecision().</p>
+    </div>
+    
+    <div class="section">
+        <h2>Precision Methods Comparison</h2>
+        <button onclick="comparePrecisionMethods()">Compare toPrecision() vs toFixed()</button>
+        <p id="toPrecisionResult5" class="output">Click to compare toPrecision() with other formatting methods.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Basic toFixed() Method</h2>
+        <button onclick="basicToFixedDemo()">Test Basic toFixed()</button>
+        <p id="toFixedResult1" class="output">Click to see basic toFixed() method demonstration.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Currency Formatting with toFixed()</h2>
+        <button onclick="currencyToFixedDemo()">Test Currency Formatting</button>
+        <p id="toFixedResult2" class="output">Click to see toFixed() used for currency and financial formatting.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Interactive toFixed() Method</h2>
+        <input id="toFixedInput" type="number" placeholder="Enter a number" value="123.456789" step="any">
+        <input id="decimalsInput" type="number" placeholder="Decimal places (0-100)" value="2" min="0" max="100">
+        <button onclick="interactiveToFixed()">Apply toFixed()</button>
+        <p id="toFixedResult3" class="output">Enter a number and decimal places above, then click to apply toFixed().</p>
+    </div>
+    
+    <div class="section">
+        <h2>Basic valueOf() Method</h2>
+        <button onclick="basicValueOfDemo()">Test Basic valueOf()</button>
+        <p id="valueOfResult1" class="output">Click to see basic valueOf() method demonstration.</p>
+    </div>
+    
+    <div class="section">
+        <h2>valueOf() in Comparisons</h2>
+        <button onclick="valueOfComparisonDemo()">Test valueOf() Comparisons</button>
+        <p id="valueOfResult2" class="output">Click to see valueOf() used in comparisons and calculations.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Custom valueOf() Method</h2>
+        <button onclick="customValueOfDemo()">Test Custom valueOf()</button>
+        <p id="valueOfResult3" class="output">Click to see custom valueOf() implementation.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Practical valueOf() Applications</h2>
+        <button onclick="practicalValueOfDemo()">Show Practical Examples</button>
+        <p id="valueOfResult4" class="output">Click to see real-world valueOf() applications.</p>
+    </div>
+    
+    <div class="section">
+        <h2>Instructions</h2>
+        <p>This page demonstrates various JavaScript string and number methods:</p>
+        <ul>
+            <li><strong>String Methods:</strong></li>
+            <ul>
+                <li><strong>concat():</strong> Joining multiple strings together</li>
+                <li><strong>slice():</strong> Extracting sections of strings</li>
+                <li><strong>toUpperCase():</strong> Converting strings to uppercase</li>
+                <li><strong>search():</strong> Finding text positions with regex support</li>
+            </ul>
+            <li><strong>Number Methods:</strong></li>
+            <ul>
+                <li><strong>toString():</strong> Converting numbers to strings</li>
+                <li><strong>toPrecision():</strong> Formatting numbers with specified precision</li>
+                <li><strong>toFixed():</strong> Formatting numbers with fixed decimal places</li>
+            </ul>
+            <li><strong>Object Methods:</strong></li>
+            <ul>
+                <li><strong>valueOf():</strong> Getting primitive values from objects</li>
+            </ul>
+            <li>Interactive demonstrations with user input</li>
+            <li>Practical real-world applications</li>
+            <li>Method comparisons and best practices</li>
+        </ul>
+        <p><strong>Note:</strong> Open Chrome Dev Tools (F12) and check the Console tab to see detailed logging of each operation.</p>
+    </div>
+</body>
+</html>

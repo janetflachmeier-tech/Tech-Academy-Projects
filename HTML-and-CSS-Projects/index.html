@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Space Station | Resort</title>
+    <link rel="stylesheet" href="./css/shared.css">
+    <link rel="stylesheet" href="./css/animations.css">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <div class="wrap">
+        <nav class="menu-container">
+            <ul class="menu">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#contact">RESERVATION</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- END NAV -->
+
+    <!-- HOME -->
+    <section id="home">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="head-main">The Space Station</h1>
+            </div>
+        </div>
+    </section>
+    <!-- END HOME -->
+
+    <!-- GALLERY -->
+    <section id="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="flex-container">
+
+                <!-- PHOTO CONTAINERS -->
+                <!-- Repeatable photo block -->
+                <!-- You can loop this in JS or server-side for scalability -->
+                <div class="photo-container">
+                    <div class="photo">
+                        <img src="images/thumb/thumbnail_1.png" alt="Space launch thumbnail 1">
+                        <div class="photo-overlay">
+                            <h3>Click to Enlarge</h3>
+                            <p>We have several space launches departing daily. Book your flight today!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Repeat for thumbnails 2–9 -->
+                <!-- ... (same structure, just update image src and alt text) -->
+
+            </div>
+        </div>
+    </section>
+    <!-- END GALLERY -->
+
+    <!-- RESERVATION -->
+    <section id="contact">
+        <div class="container">
+            <h2>Reservation</h2>
+            <div class="reservation">
+                <h3>Your adventure is just around the moon.</h3>
+                <p>Reserve your flight today!</p>
+                <p class="rsvp-text">Please provide us with your basic contact information.</p>
+
+                <form class="form-rsvp" action="/submit-rsvp" method="post">
+                    <input class="rsvp" type="text" name="firstName" placeholder="First Name" required>
+                    <input class="rsvp" type="text" name="lastName" placeholder="Last Name" required>
+                    <input class="rsvp" type="email" name="email" placeholder="Email Address" required>
+                    <input class="rsvp" type="tel" name="phone" placeholder="Phone Number" required>
+
+                    <div class="form-spacer">
+                        <label class="terms">
+                            <input type="checkbox" name="terms" required>
+                            I agree to the Terms and Conditions
+                        </label>
+                    </div>
+
+                    <button type="submit" class="rsvp-submit">Submit RSVP</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- END RESERVATION -->
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <p>www.thespacestation.com &nbsp; | &nbsp; &copy; 2025</p>
+    </footer>
+    <!-- END FOOTER -->
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+Update Basic HTML and CSS assignment
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Fri Oct 31 20:22:20 2025 -0400
+#
+# On branch main
+# Your branch and 'origin/main' have diverged,
+# and have 2 and 4 different commits each, respectively.
+#
+# No commands done.
+# Next commands to do (2 remaining commands):
+#    pick edbe8bb # Re-add Janet's Web Project as regular folder
+#    pick 70ab877 # Update Basic HTML and CSS assignment
+# You are currently editing a commit while rebasing branch 'main' on '4af5e91'.
+#
+# Changes to be committed:
+#	deleted:    Janet's Web Project/Basic_CSS_1.css
+#	deleted:    Janet's Web Project/Basic_CSS_2.css
+#	deleted:    Janet's Web Project/Basic_HTML_3.html
+#	deleted:    Janet's Web Project/Basic_HTML_4.html
+#	deleted:    Janet's Web Project/Basic_HTML_5.html
+#	deleted:    Janet's Web Project/CSS_Lists.css
+#	deleted:    Janet's Web Project/CSS_Table.css
+#	deleted:    Janet's Web Project/HTML_Lists.html
+#	deleted:    Janet's Web Project/HTML_Table.html
+#	deleted:    Janet's Web Project/Images/Thumb/thumbnail_1.png
+#	deleted:    Janet's Web Project/Images/Thumb/thumbnail_2.png
+#	deleted:    Janet's Web Project/Images/Thumb/thumbnail_3.png
+#	deleted:    Janet's Web Project/Images/Thumb/thumbnail_4.png
+#	deleted:    Janet's Web Project/Images/Thumb/thumbnail_5.png
+#	deleted:    Janet's Web Project/Images/Thumb/thumbnail_6.png
+#	deleted:    Janet's Web Project/Images/Thumb/thumbnail_7.png
+#	deleted:    Janet's Web Project/Images/Thumb/thumbnail_8.png
+#	deleted:    Janet's Web Project/Images/Thumb/thumbnail_9.png
+#	deleted:    Janet's Web Project/Linked_CSS_Example.html
+#	deleted:    Janet's Web Project/My_Style.css
+#	deleted:    Janet's Web Project/Paragraph_Class_Assignment.html
+#	deleted:    Janet's Web Project/Style_Element_Assignment.html
+#	deleted:    Janet's Web Project/index.html
+#	deleted:    Janet's Web Project/one_page_website.html
+#	modified:   Paragraph_Class_Assignment.html
+#
