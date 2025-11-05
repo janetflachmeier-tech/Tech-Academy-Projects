@@ -35,6 +35,42 @@ A basic AJAX demonstration that shows how to:
 - Vanilla JavaScript
 - XMLHttpRequest API
 
+## 📁 jQuery Project
+
+### Description
+Comprehensive jQuery demonstrations covering fundamental and advanced concepts:
+- jQuery selectors and DOM manipulation
+- Event handling (click, hover, double-click)
+- jQuery effects and animations
+- CSS manipulation with jQuery
+- Interactive user interfaces
+
+### Files Included:
+- `basic_jquery.html` - Fundamental jQuery concepts from video tutorial
+- `jq2_demo.html` - Advanced jQuery challenge with events and effects
+- `README.md` - Detailed project documentation
+
+### How to Run:
+1. Open any HTML file directly in a web browser
+2. Or use a local server for optimal performance
+3. All jQuery functionality works immediately via CDN
+
+### Features:
+- ✅ jQuery document ready implementation
+- ✅ Multiple event handlers (click, hover, dblclick)
+- ✅ Fade effects (fadeIn, fadeOut, fadeToggle)
+- ✅ CSS manipulation and styling
+- ✅ Comprehensive code comments
+- ✅ Professional UI design
+- ✅ Interactive demonstrations
+
+### Technologies Used:
+- HTML5
+- CSS3
+- jQuery 3.4
+- JavaScript
+- Google CDN
+
 ---
 
-*Course Assignment Completed: November 5, 2025*
+*Course Assignments Completed: November 5, 2025*

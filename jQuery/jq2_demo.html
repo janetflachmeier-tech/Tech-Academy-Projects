@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4/jquery.min.js"></script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding: 20px;
+                background-color: #f0f8ff;
+            }
+            
+            #container {
+                max-width: 800px;
+                margin: 0 auto;
+                background-color: white;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+            
+            h1 {
+                color: #2c3e50;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            
+            .demo-section {
+                margin: 30px 0;
+                padding: 20px;
+                border: 2px solid #ecf0f1;
+                border-radius: 8px;
+                background-color: #fafafa;
+            }
+            
+            .demo-title {
+                color: #34495e;
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 15px;
+                border-bottom: 2px solid #3498db;
+                padding-bottom: 5px;
+            }
+            
+            button {
+                background-color: #3498db;
+                color: white;
+                border: none;
+                padding: 12px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                margin: 10px 5px;
+                transition: all 0.3s ease;
+            }
+            
+            button:hover {
+                background-color: #2980b9;
+                transform: translateY(-2px);
+            }
+            
+            .effect-box {
+                width: 200px;
+                height: 100px;
+                background: linear-gradient(45deg, #e74c3c, #f39c12);
+                margin: 20px auto;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-weight: bold;
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            }
+            
+            .hover-demo {
+                background-color: #9b59b6;
+                color: white;
+                padding: 15px;
+                border-radius: 5px;
+                margin: 15px 0;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            
+            p {
+                line-height: 1.6;
+                margin: 15px 0;
+            }
+            
+            .status {
+                font-weight: bold;
+                color: #27ae60;
+                background-color: #ecf0f1;
+                padding: 10px;
+                border-radius: 5px;
+                margin: 10px 0;
+            }
+        </style>
+    </head>
+    <script>
+        $(document).ready(function() {
+            $("html").append (
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>jQuery Events & Effects Challenge</h1>\
+                            \
+                            <!-- Original Demo -->\
+                            <div class='demo-section'>\
+                                <div class='demo-title'>Original Demo</div>\
+                                <p id='1'>Paragraph 1 - Now styled in red</p>\
+                                <p id='2'>Paragraph 2 - Click to hide the header</p>\
+                                <p id='3'>Paragraph 3 - Original functionality</p>\
+                            </div>\
+                            \
+                            <!-- jQuery Event Challenge: Double Click Event -->\
+                            <div class='demo-section'>\
+                                <div class='demo-title'>📱 jQuery Event: Double Click (dblclick)</div>\
+                                <p>Double-click the box below to trigger an event:</p>\
+                                <div id='dblclick-demo' class='hover-demo'>\
+                                    Double-click me to see the magic! 🎯\
+                                </div>\
+                                <div id='dblclick-status' class='status' style='display:none;'>\
+                                    Double-click event triggered! You activated the dblclick handler.\
+                                </div>\
+                            </div>\
+                            \
+                            <!-- jQuery Effect Challenge: Fade Effect -->\
+                            <div class='demo-section'>\
+                                <div class='demo-title'>✨ jQuery Effect: Fade In/Out Animation</div>\
+                                <p>Click the buttons to see fade effects in action:</p>\
+                                <div id='fade-box' class='effect-box'>\
+                                    I can fade! 🌟\
+                                </div>\
+                                <button id='fade-out-btn'>Fade Out</button>\
+                                <button id='fade-in-btn'>Fade In</button>\
+                                <button id='fade-toggle-btn'>Fade Toggle</button>\
+                            </div>\
+                            \
+                            <!-- Bonus: Hover Event -->\
+                            <div class='demo-section'>\
+                                <div class='demo-title'>🎨 Bonus: Hover Event with Slide Effect</div>\
+                                <p>Hover over the box to see combined event and effect:</p>\
+                                <div id='slide-box' class='effect-box' style='height: 50px;'>\
+                                    Hover over me! 🎪\
+                                </div>\
+                            </div>\
+                        </div>\
+                    </div>\
+                </body>"
+            );
+            
+            // Original functionality
+            $("#2").css({"color":"red"});
+            $("#3").click(function() {
+                $("h1").hide();
+            });
+            
+            // ===== JQUERY EVENT CHALLENGE: DOUBLE CLICK =====
+            // Using the dblclick event from jQuery Event Basics
+            $("#dblclick-demo").dblclick(function() {
+                // Show status message
+                $("#dblclick-status").fadeIn();
+                
+                // Change background color randomly
+                var colors = ["#e74c3c", "#3498db", "#2ecc71", "#f39c12", "#9b59b6"];
+                var randomColor = colors[Math.floor(Math.random() * colors.length)];
+                $(this).css("background-color", randomColor);
+                
+                // Add some text feedback
+                $(this).text("Double-clicked! Try again! 🎉");
+                
+                // Reset after 2 seconds
+                setTimeout(function() {
+                    $("#dblclick-demo").text("Double-click me to see the magic! 🎯");
+                    $("#dblclick-status").fadeOut();
+                }, 2000);
+            });
+            
+            // ===== JQUERY EFFECT CHALLENGE: FADE EFFECTS =====
+            // Using fadeOut, fadeIn, and fadeToggle from jQuery Effects
+            
+            // Fade Out Effect
+            $("#fade-out-btn").click(function() {
+                $("#fade-box").fadeOut(1000); // 1 second duration
+            });
+            
+            // Fade In Effect  
+            $("#fade-in-btn").click(function() {
+                $("#fade-box").fadeIn(1000); // 1 second duration
+            });
+            
+            // Fade Toggle Effect
+            $("#fade-toggle-btn").click(function() {
+                $("#fade-box").fadeToggle(1000); // 1 second duration
+            });
+            
+            // ===== BONUS: HOVER EVENT WITH SLIDE EFFECT =====
+            // Combining hover event with slideDown/slideUp effects
+            $("#slide-box").hover(
+                function() {
+                    // Mouse enter - slide down to expand
+                    $(this).slideUp(300).slideDown(300);
+                    $(this).css({
+                        "height": "150px",
+                        "background": "linear-gradient(45deg, #2ecc71, #3498db)"
+                    });
+                    $(this).text("Hovered! Nice work! 🌈");
+                },
+                function() {
+                    // Mouse leave - return to normal
+                    $(this).css({
+                        "height": "50px", 
+                        "background": "linear-gradient(45deg, #e74c3c, #f39c12)"
+                    });
+                    $(this).text("Hover over me! 🎪");
+                }
+            );
+        });
+    </script>
+</html>

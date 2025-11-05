@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Meta tags for proper document structure -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Basic jQuery Demo</title>
+        
+        <!-- jQuery CDN - Loading the jQuery library from Google's CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4/jquery.min.js"></script>
+        
+        <!-- Internal CSS for styling the demo -->
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding: 20px;
+                background-color: #f5f5f5;
+                margin: 0;
+            }
+            
+            .container {
+                max-width: 600px;
+                margin: 0 auto;
+                background: white;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            }
+            
+            h1 {
+                color: #333;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            
+            p {
+                padding: 15px;
+                margin: 10px 0;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            
+            #paragraph1 {
+                background-color: #e8f4f8;
+                border-left: 4px solid #3498db;
+            }
+            
+            #paragraph2 {
+                background-color: #fdeaea;
+                border-left: 4px solid #e74c3c;
+            }
+            
+            #paragraph3 {
+                background-color: #eaf2e8;
+                border-left: 4px solid #27ae60;
+            }
+            
+            p:hover {
+                transform: translateX(10px);
+                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            }
+        </style>
+    </head>
+    
+    <body>
+        <!-- Main container for the jQuery demo -->
+        <div class="container">
+            <h1>Basic jQuery Demo</h1>
+            
+            <!-- Paragraph 1: Demonstrates basic jQuery selection and CSS styling -->
+            <p id="paragraph1">
+                Paragraph 1 - This will be styled with jQuery CSS methods
+            </p>
+            
+            <!-- Paragraph 2: Demonstrates jQuery click event handling -->
+            <p id="paragraph2">
+                Paragraph 2 - Click me to change my color using jQuery!
+            </p>
+            
+            <!-- Paragraph 3: Demonstrates jQuery event handling with hide effect -->
+            <p id="paragraph3">
+                Paragraph 3 - Click me to hide the header using jQuery hide() method!
+            </p>
+        </div>
+
+        <!-- jQuery JavaScript code section -->
+        <script>
+            /**
+             * jQuery Document Ready Function
+             * This ensures all HTML elements are loaded before jQuery code executes
+             * $(document).ready() is the jQuery way to wait for DOM to be ready
+             */
+            $(document).ready(function() {
+                
+                /**
+                 * BASIC JQUERY SELECTOR AND CSS MANIPULATION
+                 * Using jQuery to select element by ID (#paragraph1) and apply CSS styles
+                 * .css() method allows us to modify CSS properties dynamically
+                 */
+                $("#paragraph1").css({
+                    "color": "blue",           // Changes text color to blue
+                    "font-weight": "bold",     // Makes text bold
+                    "font-size": "18px"        // Increases font size
+                });
+                
+                /**
+                 * JQUERY CLICK EVENT HANDLER
+                 * .click() method attaches a click event listener to the selected element
+                 * When paragraph2 is clicked, this function executes
+                 */
+                $("#paragraph2").click(function() {
+                    // $(this) refers to the clicked element (paragraph2)
+                    // Toggle between red and green colors on each click
+                    var currentColor = $(this).css("color");
+                    
+                    if (currentColor === "rgb(231, 76, 60)" || currentColor === "red") {
+                        // If current color is red, change to green
+                        $(this).css("color", "green");
+                        $(this).text("Paragraph 2 - Now I'm green! Click again!");
+                    } else {
+                        // If current color is not red, change to red
+                        $(this).css("color", "red");
+                        $(this).text("Paragraph 2 - Now I'm red! Click again!");
+                    }
+                });
+                
+                /**
+                 * JQUERY CLICK EVENT WITH HIDE EFFECT
+                 * Another click event handler that demonstrates jQuery effects
+                 * .hide() method is a jQuery effect that hides elements
+                 */
+                $("#paragraph3").click(function() {
+                    // Select the h1 element and hide it with animation
+                    $("h1").hide("slow");  // "slow" adds animation duration
+                    
+                    // Change the clicked paragraph's text to provide feedback
+                    $(this).text("Header hidden! Refresh page to see it again.");
+                    $(this).css("background-color", "#d4edda");
+                });
+                
+                /**
+                 * JQUERY HOVER EFFECT (BONUS)
+                 * .hover() method handles both mouseenter and mouseleave events
+                 * First function runs on mouse enter, second on mouse leave
+                 */
+                $("p").hover(
+                    function() {
+                        // Mouse enters - add highlight effect
+                        $(this).css("background-color", "#fff3cd");
+                    },
+                    function() {
+                        // Mouse leaves - remove highlight effect
+                        $(this).css("background-color", "");
+                    }
+                );
+                
+                /**
+                 * CONSOLE OUTPUT FOR DEBUGGING
+                 * Good practice to log when jQuery is ready and working
+                 */
+                console.log("jQuery is loaded and ready!");
+                console.log("All event handlers have been attached successfully.");
+            });
+        </script>
+    </body>
+</html>
