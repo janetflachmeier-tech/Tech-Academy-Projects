@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Character encoding for proper text display -->
+        <meta charset="utf-8">
+        <title>Basic AJAX Demo</title>
+        <!-- Link to external CSS file for styling -->
+		<link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Main container for the AJAX demo -->
+        <div class="main">
+			<h2>Get The Latest Content:</h2>
+			<!-- Content area where AJAX response will be displayed -->
+			<div class='content' id="content">
+				<!-- Button to trigger AJAX request -->
+				<input type="button" class="button" value="Get Content" id="btn_content" onclick="getContent();"/>
+			</div>
+		</div>
+		
+		<!-- JavaScript section for AJAX functionality -->
+		<script type="text/javascript">
+            /**
+             * AJAX Demo Function
+             * This function demonstrates the 4 basic steps of an AJAX request:
+             * 1. Create XMLHttpRequest object
+             * 2. Configure the request
+             * 3. Define response handler
+             * 4. Send the request
+             */
+            function getContent() {
+                // STEP 1: Create XMLHttpRequest object
+                // This object handles the AJAX communication with the server
+                var ajax = new XMLHttpRequest();
+                
+                // STEP 2: Configure the AJAX request
+                // GET method to retrieve content.html file
+                ajax.open("GET", 'content.html');
+                
+                // STEP 3: Define the response callback method
+                // This function runs when the server responds
+                ajax.onreadystatechange = function() {
+                    // Check if request is complete (readyState 4)
+                    if(ajax.readyState == 4) {
+                        // Check if request was successful (status 200)
+                        if(ajax.status == 200) {
+                            // SUCCESS: Replace content div with server response
+                            document.getElementById("content").innerHTML = ajax.responseText;
+                        } else {
+                            // ERROR HANDLING: Show specific error messages
+                            var errorMsg = '';
+                            if(ajax.status == 0) {
+                                // Status 0 typically means CORS error or server not running
+                                errorMsg = 'Connection failed. Please ensure:<br>' +
+                                          '• XAMPP server is running<br>' +
+                                          '• Access via http://localhost/ (not file://)<br>' +
+                                          '• content.html file exists';
+                            } else if(ajax.status == 404) {
+                                // Status 404 means file not found
+                                errorMsg = 'File not found (404). Check if content.html exists.';
+                            } else {
+                                // Other HTTP error codes
+                                errorMsg = 'Error loading content. Status: ' + ajax.status;
+                            }
+                            
+                            // Display error message with retry option
+                            document.getElementById("content").innerHTML = 
+                                '<p style="color: red;">' + errorMsg + '</p>' +
+                                '<input type="button" class="button" value="Try Again" onclick="getContent();"/>';
+                        }
+                    }
+                };
+                
+                // STEP 4: Send the AJAX request to the server
+                ajax.send();
+                
+                // UI UPDATES: Hide button and show loading message
+                document.getElementById("btn_content").style.display = 'none';
+                document.getElementById("content").innerHTML = '<p>Loading content...</p>';
+            }
+		</script>
+    </body>
+</html>
