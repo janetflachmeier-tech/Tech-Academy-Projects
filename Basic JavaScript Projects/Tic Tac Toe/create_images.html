@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create X and O Images for Tic Tac Toe</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        canvas { border: 2px solid #333; margin: 10px; cursor: pointer; }
+        .canvas-container { display: inline-block; text-align: center; margin: 20px; }
+        button { padding: 10px 20px; font-size: 16px; margin: 10px; cursor: pointer; }
+        h1 { color: #333; }
+        .instructions { background: #f0f0f0; padding: 15px; border-radius: 5px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1>Create X and O Images for Your Tic Tac Toe Game</h1>
+    
+    <div class="instructions">
+        <h3>Instructions:</h3>
+        <ol>
+            <li>Click the "Generate Images" button below</li>
+            <li>Right-click each image and select "Save image as..."</li>
+            <li>Save as "x.png" and "o.png" in your images folder</li>
+            <li>Update your JavaScript to use images instead of text</li>
+        </ol>
+    </div>
+    
+    <button onclick="generateImages()">Generate X and O Images</button>
+    <button onclick="downloadImages()">Download Both Images</button>
+    
+    <div id="images-container"></div>
+    
+    <script>
+        function generateImages() {
+            const container = document.getElementById('images-container');
+            container.innerHTML = '';
+            
+            // Create X image
+            const xContainer = document.createElement('div');
+            xContainer.className = 'canvas-container';
+            const xCanvas = document.createElement('canvas');
+            xCanvas.width = 200;
+            xCanvas.height = 200;
+            xCanvas.id = 'x-canvas';
+            
+            const xCtx = xCanvas.getContext('2d');
+            // Clear background
+            xCtx.fillStyle = 'white';
+            xCtx.fillRect(0, 0, 200, 200);
+            // Draw X
+            xCtx.strokeStyle = '#2196F3';
+            xCtx.lineWidth = 15;
+            xCtx.lineCap = 'round';
+            xCtx.beginPath();
+            xCtx.moveTo(40, 40);
+            xCtx.lineTo(160, 160);
+            xCtx.moveTo(160, 40);
+            xCtx.lineTo(40, 160);
+            xCtx.stroke();
+            
+            const xLabel = document.createElement('p');
+            xLabel.textContent = 'X Image (Right-click to save as x.png)';
+            xContainer.appendChild(xCanvas);
+            xContainer.appendChild(xLabel);
+            
+            // Create O image
+            const oContainer = document.createElement('div');
+            oContainer.className = 'canvas-container';
+            const oCanvas = document.createElement('canvas');
+            oCanvas.width = 200;
+            oCanvas.height = 200;
+            oCanvas.id = 'o-canvas';
+            
+            const oCtx = oCanvas.getContext('2d');
+            // Clear background
+            oCtx.fillStyle = 'white';
+            oCtx.fillRect(0, 0, 200, 200);
+            // Draw O
+            oCtx.strokeStyle = '#FF5722';
+            oCtx.lineWidth = 15;
+            oCtx.lineCap = 'round';
+            oCtx.beginPath();
+            oCtx.arc(100, 100, 60, 0, 2 * Math.PI);
+            oCtx.stroke();
+            
+            const oLabel = document.createElement('p');
+            oLabel.textContent = 'O Image (Right-click to save as o.png)';
+            oContainer.appendChild(oCanvas);
+            oContainer.appendChild(oLabel);
+            
+            container.appendChild(xContainer);
+            container.appendChild(oContainer);
+        }
+        
+        function downloadImages() {
+            const xCanvas = document.getElementById('x-canvas');
+            const oCanvas = document.getElementById('o-canvas');
+            
+            if (xCanvas && oCanvas) {
+                // Download X image
+                const xLink = document.createElement('a');
+                xLink.download = 'x.png';
+                xLink.href = xCanvas.toDataURL();
+                xLink.click();
+                
+                // Download O image
+                setTimeout(() => {
+                    const oLink = document.createElement('a');
+                    oLink.download = 'o.png';
+                    oLink.href = oCanvas.toDataURL();
+                    oLink.click();
+                }, 500);
+            } else {
+                alert('Please generate images first!');
+            }
+        }
+        
+        // Auto-generate images on page load
+        window.onload = function() {
+            generateImages();
+        };
+    </script>
+</body>
+</html>
