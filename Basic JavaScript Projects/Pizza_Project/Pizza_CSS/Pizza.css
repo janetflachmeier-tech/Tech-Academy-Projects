@@ -1,0 +1,81 @@
+
+/* CSS Pizza Menu Challenge Styling */
+
+/* Background color for body element */
+body {
+    background-color: #f4f4f4;
+}
+
+/* Font family and color for h1 elements */
+h1 {
+    font-family: 'Arial', sans-serif;
+    color: #d32f2f;
+}
+
+/* Font family and color for h3 elements */
+h3 {
+    font-family: 'Verdana', sans-serif;
+    color: #2e7d32;
+}
+
+/* Font family and color for div elements */
+div {
+    font-family: 'Georgia', serif;
+    color: #424242;
+}
+
+/* Existing layout styles */
+#menuBG {
+    width: 600px;
+    height: 470px;
+    margin: 10px auto;
+}
+#frmMenu {
+    width: 600px;
+    height: 200px;
+}
+
+#totalPrice {
+    width: 200px;
+    height: 190px;
+    margin: 0 auto;
+    float: right;
+}
+.left {
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+.center {
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+.right {
+    width: 200px;
+    height: 200px;
+    float: right;
+}
+
+#showText {
+    width: 200px;
+    height: 190px;
+    margin: 0px auto;
+    float: left;
+}
+
+#cart {
+    margin: 0px auto;
+    width: 600px;
+    height: 200px;
+    clear: both;
+}
+
+#btnOrder {
+    margin: 10px 0px 0px 100px;
+    width: 100px;
+    height: 40px;
+
+}
